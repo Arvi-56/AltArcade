@@ -1,12 +1,11 @@
 //screen /dev/cu.usbmodem47535501 9600
 /********************* keystroke parameters *********************/
 //Bottom Lvl
-#define RT_1 KEY_D
-#define LT_2 KEY_A
-
+#define RT_1 KEY_A
+#define LT_2 KEY_D
 //Middle Lvl
-#define UP_3 KEY_W
-#define DWN_4 KEY_S
+#define UP_3 KEY_C
+#define DWN_4 KEY_C
 
 //Top Lvl
 #define ALT_5 KEY_SPACE
@@ -35,7 +34,7 @@ const float R_DIV = 4660.0; // Measured resistance of 3.3k resistor
 
 // This is how you calibrate in different lighting
 //Set this to the minimum resistance require to turn an LED on:
-const float DARK_THRESHOLD = 900;
+float DARK_THRESHOLD = 2000;
 
 
 /********************* go to deep sleep parameters *********************/
@@ -80,7 +79,7 @@ void loop()
   //Pin 1 controls
   if (lightADC1 > 0)
   {
-    // Use the ADC reading to calculate voltage and resistance 
+    // Use the ADC reading to calculate voltage and resistance  
     float lightV = lightADC1 * VCC / 1023.0;
     float lightR = R_DIV * (VCC / lightV - 1.0);
     Serial.println("Voltage: " + String(lightV) + " V");
@@ -88,16 +87,17 @@ void loop()
 
     // If resistance of photocell is greater than the dark
     // threshold setting, turn the LED on.
-    if (lightR <= DARK_THRESHOLD)
+    if (lightR >= DARK_THRESHOLD)
     {
       digitalWrite(LED_PIN, HIGH);
       Keyboard.press(RT_1);
-      Keyboard.release(RT_1);
+      
       Serial.println("Right ");
       kill=kill+1;
     }
     else
     {
+      Keyboard.release(RT_1);
       digitalWrite(LED_PIN, LOW);
     }
     
@@ -112,6 +112,7 @@ void loop()
   //Pin 2 Controls
   if (lightADC2 > 0)
   {
+    DARK_THRESHOLD = 4000;
     // Use the ADC reading to calculate voltage and resistance 
     float lightV = lightADC2 * VCC / 1023.0;
     float lightR = R_DIV * (VCC / lightV - 1.0);
@@ -120,17 +121,17 @@ void loop()
 
     // If resistance of photocell is greater than the dark
     // threshold setting, turn the LED on.
-    if (lightR <= DARK_THRESHOLD)
+    if (lightR >= DARK_THRESHOLD)
     {
       digitalWrite(LED_PIN, HIGH);
       Keyboard.press(LT_2);
-      Keyboard.release(LT_2);
       Serial.println("Left ");
       kill=kill+1;
     }
     else
     {
       digitalWrite(LED_PIN, LOW);
+      Keyboard.release(LT_2);
     }
 
     if(kill>=500000) //amount of keystrokes before kill switch (needs to be a very big #)
@@ -152,17 +153,17 @@ void loop()
 
     // If resistance of photocell is greater than the dark
     // threshold setting, turn the LED on.
-    if (lightR <= DARK_THRESHOLD)
+    if (lightR >= DARK_THRESHOLD)
     {
       digitalWrite(LED_PIN, HIGH);
       Keyboard.press(UP_3);
-      Keyboard.release(UP_3);
       Serial.println("Up ");
       kill=kill+1;
     }
     else
     {
       digitalWrite(LED_PIN, LOW);
+      Keyboard.release(UP_3);
     }
 
     if(kill>=500000) //amount of keystrokes before kill switch (needs to be a very big #)
@@ -182,19 +183,19 @@ void loop()
     Serial.println("Voltage: " + String(lightV) + " V");
     Serial.println("Resistance: " + String(lightR) + " ohms");
 
-    // If resistance of photocell is greater than the dark
+    // If resistance of photocell is greater than the dark daws daws daws dawsdawsdawsdaws  
     // threshold setting, turn the LED on.
-    if (lightR <= DARK_THRESHOLD)
+    if (lightR >= DARK_THRESHOLD)
     {
       digitalWrite(LED_PIN, HIGH);
       Keyboard.press(DWN_4);
-      Keyboard.release(DWN_4);
       Serial.println("Down ");
       kill=kill+1;
     }
     else
     {
       digitalWrite(LED_PIN, LOW);
+      Keyboard.release(DWN_4);
     }
 
     if(kill>=500000) //amount of keystrokes before kill switch (needs to be a very big #)
@@ -216,17 +217,17 @@ void loop()
 
     // If resistance of photocell is greater than the dark
     // threshold setting, turn the LED on.
-    if (lightR <= DARK_THRESHOLD)
+    if (lightR >= DARK_THRESHOLD)
     {
       digitalWrite(LED_PIN, HIGH);
       Keyboard.press(ALT_5);
-      Keyboard.release(ALT_5);
       Serial.println("Space ");
       kill=kill+1;
     }
     else
     {
       digitalWrite(LED_PIN, LOW);
+      Keyboard.release(ALT_5);
     }
 
     if(kill>=500000) //amount of keystrokes before kill switch (needs to be a very big #)
