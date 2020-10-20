@@ -4,8 +4,8 @@
 #define RT_1 KEY_A
 #define LT_2 KEY_D
 //Middle Lvl
-#define UP_3 KEY_C
-#define DWN_4 KEY_C
+#define UP_3 KEY_W
+#define DWN_4 KEY_S
 
 //Top Lvl
 #define ALT_5 KEY_SPACE
