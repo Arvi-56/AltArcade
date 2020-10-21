@@ -1,3 +1,7 @@
+<h1>Catroller Tower</h1>
+
+![Catroller Setup](https://github.com/Arvi-56/AltArcade/Images/catroller1.jpg)
+
 <strong>Demo Video:</strong>
 https://youtu.be/y3gFuuZoAqY
 
@@ -7,7 +11,6 @@ keyboard and players bat the balls around to
 execute keystrokes. The catroller sits on top of a box with a hole and a hatch in the back for storing the bread-
 board and the long wires.
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 <strong>Github Teensey Code:</strong>
 https://github.com/Arvi-56/AltArcade/blob/
