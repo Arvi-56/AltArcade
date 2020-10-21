@@ -6,8 +6,8 @@
 https://youtu.be/y3gFuuZoAqY
 
 <strong>Github Teensey Code:</strong>
-https://github.com/Arvi-56/AltArcade/blob/
-master/Catroller/final-catroller.ino
+https://github.com/Arvi-56/AltArcade/blob/master/Catroller/final-catroller.ino
+
 The code sends press keystroke when the ball is on top of the photoresistors and re-
 lease keystroke when the ball moves away. 
 All the keystrokes and their location is ex-
