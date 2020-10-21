@@ -23,4 +23,4 @@ Catroller connects to the computer as a USB keyboard and players bat the balls a
 <strong>Circut:</strong>
 Uses photoresistors with 10k resistors to send analog voltage differences according to how much light there is. Also features LEDs for lighting and an LED for feedback which blinks when a keystroke is sent. The whole rig is set up using a teensey, photoresistors, leds, a breadboard, and jumpers. Red is power, orange is ground, and blue is analog pins (A0, 16, 17, 20, 22, 23)
 
-![Catroller Setup](https://github.com/Arvi-56/AltArcade/blob/master/Images/circut.png)
+![Catroller Setup](https://github.com/Arvi-56/AltArcade/blob/master/Images/circutry.png)
