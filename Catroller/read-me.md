@@ -16,7 +16,7 @@ At the moment the controller is programmed to WASD and Space.
 To calibrate the controller for different rooms with different lighting adjust the darkness threshold to the minimum resistance that is considered to be dark. Higher the threshold, the darker it needs to be to send a keystroke. Although if the threshold is too low it can send keystrokes randomly.
 
 <strong>Setup:</strong>
-Catroller connects to the computer as a USB keyboard and players bat the balls around to execute keystrokes. The catroller sits on top of a box with a hole and a hatch in the back for storing the breadboard and the long wires.
+Catroller connects to the computer as a USB keyboard and players bat the balls around to execute keystrokes. The catroller sits on top of a box with a hole and a hatch in the back for storing the breadboard, teensey, and the long wires.
 
 ![Catroller Setup](https://github.com/Arvi-56/AltArcade/blob/master/Images/catroller2.jpg)
 
