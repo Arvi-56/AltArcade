@@ -8,10 +8,10 @@ https://youtu.be/oEbL4ekvbRs
 <strong>Download Video Game Build:</strong>
 https://drive.google.com/drive/folders/1NyDUHP86UXgTjmJrokYxnXgwtNSggjw9?usp=sharing
 
-<strong>Setup:</strong>
-Controller connects to the computer as a USB keyboard.
-Turn the wheel to aim ship.
-Slide back the slingshot to launch cannon.
+<strong>Setup:</strong><br>
+Controller connects to the computer as a USB keyboard.<br>
+Turn the wheel to aim ship.<br>
+Slide back the slingshot to launch cannon.<br>
 Press button to start game or reload cannon.
 
 ![Controller Setup1](https://github.com/Arvi-56/AltArcade/blob/master/Images/image1.png)
